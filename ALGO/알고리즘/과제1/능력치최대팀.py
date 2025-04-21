@@ -1,8 +1,10 @@
 from itertools import combinations
 
-n = int(input())
-team = [list(map(int, input().split())) for _ in range(n)]
-k = int(input())
+with open('input9.txt', 'r', encoding='utf-8') as f:
+    n = int(f.readline())
+    team = [list(map(int, f.readline().split())) for _ in range(n)]
+    k = int(f.readline())
+
 
 ans = 0
 
