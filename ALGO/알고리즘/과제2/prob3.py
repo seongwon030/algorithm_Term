@@ -1,5 +1,6 @@
 import random
 import time
+import heapq
 
 n = 100000
 m = 100000
@@ -25,5 +26,22 @@ for i in range(m):
 end_time = time.time()
 
 executed_time = end_time - start_time
+minutes, seconds = divmod(executed_time, 60)
+print(f"배열 총시간: {int(minutes)}분 {float(seconds)}초")
+
+heap = []
+
+for _ in range(m):
+  heapq.heappush(heap, -random.randint(0,n))
+
+start_time = time.time()
+
+for _ in range(m):
+  if random.randint(0,1) == 0:
+    heapq.heappush(heap, -random.randint(0, n))
+  else:
+    heapq.heappop(heap)
+
+executed_time = time.time() - start_time
 minutes, seconds = divmod(executed_time, 60)
 print(f"배열 총시간: {int(minutes)}분 {float(seconds)}초")
