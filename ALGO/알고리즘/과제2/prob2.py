@@ -18,7 +18,9 @@ def read_file(fname: str) -> list:
 if __name__ == "__main__":
     address = []
     while (cmd := input("$ ")) and cmd != "exit":
+        print(cmd)
         command = cmd.split()[0]
+        print(command)
         if "read" == command:
             address = read_file(cmd.split()[1])
         elif "sort" == command:

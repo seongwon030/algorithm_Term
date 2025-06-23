@@ -17,7 +17,6 @@ def max_value(n, items, w):
     dfs(0, 0, 0, 0)
     return max_profit
 
-
 n = int(input())
 items = [tuple(map(int, input().split())) for _ in range(n)]
 w = int(input())

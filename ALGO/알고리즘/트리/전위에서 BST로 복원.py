@@ -7,6 +7,7 @@ class Node:
         self.left = None
         self.right = None
 
+# 전위: root -> left -> right
 def bst_from_preorder(preorder):
     def helper(lower, upper):
         nonlocal index
@@ -30,8 +31,18 @@ def postorder(node):
     if node:
         postorder(node.left)
         postorder(node.right)
-        print(node.data, end=' ')
+        print(node.data, end='\n')
 
-preorder = [30, 20, 10, 15, 25, 23, 39, 35, 42]
+
+preorder = []
+while True:
+    try:
+        n = int(input())
+        if n == 0:
+            break
+        preorder.append(n)
+    except:
+        break
+
 root = bst_from_preorder(preorder)
 postorder(root)

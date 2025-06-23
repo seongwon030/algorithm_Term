@@ -41,8 +41,8 @@ def preorder_traversal(node):
 
 def main():
     global p_idx, build_failed
-
-    postorder = list(map(int, input("Postorder 입력: ").replace(' ', '').split(',')))
+    postorder = [10, 9, 23, 22, 27, 25, 15, 50, 95, 60, 40, 29]
+    # postorder = list(map(int, input("Postorder 입력: ").replace(' ', '').split(',')))
     inorder = list(map(int, input("Inorder 입력: ").replace(' ', '').split(',')))
 
     p_idx = len(postorder) - 1

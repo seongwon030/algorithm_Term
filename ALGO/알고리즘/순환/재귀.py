@@ -44,6 +44,9 @@ def isDisjoint(m, A, n, B):
     else:
         return isDisjoint(m, A, n-1, B)
 
+# A = [1,2,3,4,5]
+# B = [6,7,8,9,5]
+# print(isDisjoint(len(A), A, len(B), B))
 
 # 이진탐색 반복문
 def binarySearch(data, n, target):

@@ -11,7 +11,7 @@ def radixSort():
   while (max_val >= digit):
     while queue:
       num = queue.popleft()
-      buckets[(num // digit) % 10].append(num)
+      buckets[(num // digit) % 10].append(num) # digit 자리 수
 
     for bucket in buckets:
       while bucket:
